@@ -4,7 +4,7 @@ const timerText = document.querySelector('.timer__date')
 let interval                                               
 const updateClock = () => {
     const date = new Date().getTime()
-    const deadline = ('25 march 2022')
+    const deadline = ('31 march 2022')
     const dateDeadline = new Date(deadline).getTime()
     const timeRemind = (dateDeadline - date) / 1000
     const days = Math.floor(timeRemind / 60 / 60 / 24)
