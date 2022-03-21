@@ -1,6 +1,5 @@
 export function timer() {
 const timerBlock = document.querySelector('.timer__time')
-const timerText = document.querySelector('.timer__date')
 let interval                                               
 const updateClock = () => {
     const date = new Date().getTime()
@@ -17,7 +16,6 @@ const fSeconds= seconds < 10 ? '0' + seconds : seconds
 const sklonenie = (number, txt, cases = [2, 0, 1, 1, 1, 2]) => txt[(number % 100 > 4 && number % 100 < 20) ? 2 : cases[(number % 10 < 5) ? number % 10 : 5]]
 
 timerBlock.textContent = `${days} ${sklonenie(days,['день', 'дня', 'дней'])}  ${fHours}:${fMinutes}:${fSeconds}`
-// timerText.textContent = `${sklonenie(days,['день', 'дня', 'дней'])}  ${sklonenie(hours,['час', 'часа', 'часов'])}: ${sklonenie(minutes,['минута', 'минут', 'минут'])}:${sklonenie(seconds,['секунда', 'секунд', 'секунд'])}`
 if (timeRemind <= 0) {                     //обнуление  таймера
     clearInterval(interval)
     timerBlock.textContent = `00:00:00`   
